@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AC21 01</title>
+    </head>
+    <body>
+        <h1 style="text-align: center; color: crimson; font-size: 43px; text-decoration: underline;">
+            AC21.01 : Comprendre l'organisation des données de l'entreprise
+        </h1>
+        
+        <p style="text-align: justify;"> 
+            Au cours de ma deuxième année d'études en Science des Données, avec une spécialisation en Exploration et Modélisation Statistique, j'ai acquis des compétences précieuses dans le traitement des données à des fins décisionnelles. Cela m'a permis de mieux comprendre l'organisation des données au sein de l'entreprise, une compétence cruciale pour prendre des décisions éclairées, optimiser les processus et garantir l'efficacité de l'analyse des données.<br>
+
+            Pour illustrer mon propos, je vais expliquer d'où proviennent les données de mon entreprise, où elles sont stockées, qui les utilise au sein de la Direction des Systèmes d'Information de la Retraite Complémentaire AGIRC-ARRCO, ainsi que la manière dont ces données circulent, sont traitées et gérées, et avec quels outils.
+            
+            Dans le cadre de mes missions en tant qu'alternante au sein de l'équipe des développeurs, j'ai pu constater que les données reçues par la DSI AGIRC-ARRCO proviennent principalement des GPS (Groupes de Protection Sociale) tels qu'APICIL, MALAKOFF HUMANIS, etc. Ces données, sous forme de fichiers CSV, contiennent des informations détaillées sur les actifs, les bénéficiaires et d'autres éléments essentiels.
+            
+            Une de mes missions principales consiste à intégrer ces données dans le référentiel de collecte, puis à les charger dans le Data Warehouse (DWH) en fonction de la brique concernée. Une "brique" correspond à une application de gestion spécifique. Par exemple, la Brique SCL gère la liquidation des dossiers de retraite, tandis que la Brique GCE est dédiée à la gestion des comptes entreprise, parmi d'autres briques.<br>
+            
+            Les données sont tout d'abord stockées dans l'Operational Data Store (ODS). Ce processus est assuré par un traitement générique utilisant l'outil ETL DataStage, qui permet de lancer des jobs pour alimenter l'ODS en s'appuyant sur des fichiers .OSF (fichiers de schéma) ainsi que sur d'autres fichiers de paramétrage. Après avoir effectué des tests unitaires pour garantir la bonne alimentation des tables ODS, nous procédons ensuite à l'intégration des données dans le DWH. Cette alimentation du DWH se fait également via un traitement générique, permettant d'assurer la mise à jour des tables du Data Warehouse.
+            
+            Une fois les données intégrées dans le DWH, elles alimentent des DataMarts, qui sont ensuite utilisées par l'équipe Power BI pour la création de tableaux de bord. Ces tableaux sont ensuite mis en production sur les plateformes de l'AGIRC-ARRCO et sont accessibles à tous les utilisateurs concernés.<br>
+            
+            L'outil DataStage, en tant qu'ETL, a permis de mettre en place un flux de travail structuré qui garantit la bonne circulation des données au sein de l'entreprise. Bien que plusieurs traitements existent, je me concentre ici sur DataStage, car c'est l'outil que je maîtrise le mieux.<br>
+            
+            En ce qui concerne la gestion des requêtes SQL, nous utilisons Teradata. Pour l'extraction et l'intégration des données, DataStage est notre outil principal. La base de données interne est PostgreSQL, et Power BI est l'outil de Business Intelligence utilisé pour la visualisation des données.<br>
+            
+            Personnellement, mes missions se concentrent principalement sur l'intégration des données reçues de chaque brique, ainsi que sur l'extraction de données pour générer des listes détaillées destinées aux GPS. Dans un avenir proche, je serai également impliquée dans la Data Visualisation avec Power BI, un domaine dans lequel je suis impatiente d'approfondir mes compétences. 
+
+        </p>
+    </body>
+</html>
