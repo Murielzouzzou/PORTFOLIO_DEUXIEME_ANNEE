@@ -39,11 +39,14 @@ Depuis, j’ai aussi pris l’habitude de renseigner systématiquement tout ce q
 
 Même si on effectue régulièrement des inspections (autre pilier de Scrum), je considère qu’il est de ma responsabilité d’effectuer mes propres tests unitaires en amont, pour rester crédible et garantir la qualité de mes livrables.
 
-Je suis également très observatrice et j’essaie toujours de trouver des solutions innovantes. Par exemple, en lien avec mes cours sur l’automatisation et les tests, j'avais envisagé d'utiliser Prefect (outil de workflow moderne) pour automatiser mes contrôles, mais pour des raisons de sécurité informatique, je n'avais pas le droit de travailler dans le cloud.
-
-J’ai donc opté pour une solution en Python, adaptable en PowerShell. Ce script reçoit en entrée les fichiers à intégrer ainsi que les fichiers des tables à alimenter. Il réalise des traitements comme du tri et des vérifications, puis produit un rapport qui indique si les fichiers sont identiques ou présentent des écarts.
-
-Cette automatisation m’a permis de gagner un temps précieux : auparavant, je faisais des vérifications manuelles avec des recherches V dans Excel, ce qui était fastidieux. Aujourd’hui, le processus est plus rapide, fiable, et mes collègues ont d’ailleurs apprécié cette initiative.
+Je suis également très observatrice et j’essaie toujours de trouver des solutions innovantes. Par exemple, en lien avec mes cours sur l’automatisation et les tests,
+        j'avais envisagé d'utiliser Prefect, un outil de gestion de workflows moderne, pour automatiser mes contrôles. Je savais qu’il pouvait être utilisé en local,
+        sans passer par le cloud, grâce à sa version open-source. Toutefois, dans le contexte de l’entreprise, je n’avais pas l’autorisation d’installer 
+        de nouveaux outils ou de lancer des serveurs locaux, pour des raisons de sécurité informatique.
+C’est pourquoi je me suis finalement tournée vers une solution plus simple et rapide à mettre en place : 
+        un script Python (adaptable en PowerShell), qui permet de comparer automatiquement les fichiers à 
+        intégrer et les fichiers des tables déjà alimentées. Ce choix a été bien accueilli par mes collègues, 
+        car il répondait efficacement au besoin tout en respectant les contraintes de sécurité.
     </p>
 </body>
 </html>
