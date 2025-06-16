@@ -3,50 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <title>AC21.04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px 80px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: darkviolet;
+            font-size: 43px;
+            text-decoration: underline;
+            margin-bottom: 40px;
+        }
+        p {
+            text-align: justify;
+        }
+        img.profile {
+            width: 20%;
+            border-radius: 20px;
+            float: right;
+            margin: 10px 0 10px 20px;
+        }
+        figure {
+            margin: 40px auto;
+            text-align: center;
+            max-width: 700px;
+        }
+        figure img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.15);
+        }
+        figcaption {
+            margin-top: 8px;
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+        }
+        /* Clear float */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center; color: darkviolet; font-size: 43px; text-decoration: underline;">
-        AC21.04 : Comprendre la nécessité de tester, corriger et documenter un programme
-    </h1>
+    <h1>AC21.04 : Comprendre la nécessité de tester, corriger et documenter un programme</h1>
 
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.6;">
-        <img src="https://i.imgur.com/gZspfrp.jpeg" width="20%" style="border-radius: 20px; float: right; margin: 10px 0 10px 20px;">
-       Au cours de ma deuxième année d'études en Science des Données, avec une spécialisation en Exploration et Modélisation Statistique, j'ai acquis des compétences précieuses dans le traitement des données à des fins décisionnelles. Cela m'a permis de comprendre la nécessité de tester, corriger et documenter un programme.
+    <p class="clearfix">
+        <img src="https://i.imgur.com/gZspfrp.jpeg" alt="Profil personnel" class="profile">
+        Au cours de ma deuxième année d'études en Science des Données, avec une spécialisation en Exploration et Modélisation Statistique, j'ai acquis des compétences précieuses dans le traitement des données à des fins décisionnelles. Cela m'a permis de comprendre la nécessité de tester, corriger et documenter un programme.
 
-Pour illustrer mes propos, je vais parler d'une de mes missions au sein de l'AGIRC-ARRCO. Il s'agit d'un cas particulier car j'ai repris le sujet d'un de mes collègues (on a des missions en commun dont celle-ci).
+        Pour illustrer mes propos, je vais parler d'une de mes missions au sein de l'AGIRC-ARRCO. Il s'agit d'un cas particulier car j'ai repris le sujet d'un de mes collègues (on a des missions en commun dont celle-ci).
 
-Dans ce travail, j'étais censée alimenter des tables avec des fichiers de données qui nécessitent des fichiers de paramétrage (sur lesquels mon collègue avait déjà travaillé).
+        Dans ce travail, j'étais censée alimenter des tables avec des fichiers de données qui nécessitent des fichiers de paramétrage (sur lesquels mon collègue avait déjà travaillé).
 
-Déjà, il faut savoir que les fichiers de paramétrage (OSF) doivent avoir la même structure que les fichiers de données (par exemple même ordre de colonnes) pour que les tables cibles soient correctement alimentées.
+        Déjà, il faut savoir que les fichiers de paramétrage (OSF) doivent avoir la même structure que les fichiers de données (par exemple même ordre de colonnes) pour que les tables cibles soient correctement alimentées.
 
-Mais après avoir lancé les traitements qui permettent l'alimentation des tables, malgré que les traitements se soient terminés sans erreurs, j'ai dû effectuer des tests, corriger ce qui n'allait pas et ensuite documenter, c'est-à-dire expliciter toutes les modifications que j'ai faites en montrant en quoi ça a eu un impact sur les résultats.
+        Mais après avoir lancé les traitements qui permettent l'alimentation des tables, malgré que les traitements se soient terminés sans erreurs, j'ai dû effectuer des tests, corriger ce qui n'allait pas et ensuite documenter, c'est-à-dire expliciter toutes les modifications que j'ai faites en montrant en quoi ça a eu un impact sur les résultats.
 
-Le problème rencontré était dû au fait que dans les fichiers OSF qu'il a mis à ma disposition, il y en avait qui n'avaient pas la même structure que les fichiers de données. Par exemple, il y avait des champs qui n'avaient pas lieu d'être, des champs qui n'étaient pas dans le bon ordre donc les tables cibles n'étaient pas correctement alimentées.
+        Le problème rencontré était dû au fait que dans les fichiers OSF qu'il a mis à ma disposition, il y en avait qui n'avaient pas la même structure que les fichiers de données. Par exemple, il y avait des champs qui n'avaient pas lieu d'être, des champs qui n'étaient pas dans le bon ordre donc les tables cibles n'étaient pas correctement alimentées.
 
-Alors pour savoir comment une table cible a été alimentée, on fait une requête SQL, qui permet de voir les champs et les valeurs de chaque champ.
+        Alors pour savoir comment une table cible a été alimentée, on fait une requête SQL, qui permet de voir les champs et les valeurs de chaque champ.
 
-Pour réussir à détecter toutes les anomalies, j'ai comparé les fichiers de données à intégrer avec le résultat de mes requêtes Teradata (SGBD entreprise) pour au moins les 5 premières lignes ou soit en filtrant pour obtenir une seule ligne.
+        Pour réussir à détecter toutes les anomalies, j'ai comparé les fichiers de données à intégrer avec le résultat de mes requêtes Teradata (SGBD entreprise) pour au moins les 5 premières lignes ou soit en filtrant pour obtenir une seule ligne.
 
-Souvent, le problème vient du format de colonne précisé dans les fichiers de paramétrage. On peut vouloir caster un champ en integer alors qu'il s'agit d'un varchar, et dans ce cas, lors de l'alimentation, aucun problème n’est détecté automatiquement.
+        Souvent, le problème vient du format de colonne précisé dans les fichiers de paramétrage. On peut vouloir caster un champ en integer alors qu'il s'agit d'un varchar, et dans ce cas, lors de l'alimentation, aucun problème n’est détecté automatiquement.
 
-Lorsqu'il y avait un problème, j'essayais de trouver la solution à ce problème puis je relançais les traitements d'alimentation. Une fois qu'il y avait cohérence entre les données à intégrer et les tables alimentées, je précisais dans l'outil de gestion de projet entreprise (Jira software) que le problème était réglé en expliquant ma démarche.
+        Lorsqu'il y avait un problème, j'essayais de trouver la solution à ce problème puis je relançais les traitements d'alimentation. Une fois qu'il y avait cohérence entre les données à intégrer et les tables alimentées, je précisais dans l'outil de gestion de projet entreprise (Jira software) que le problème était réglé en expliquant ma démarche.
 
-La démarche en question, je l'ai non seulement mise en commentaire dans Jira mais aussi, j'ai conçu un fichier Excel avec toutes mes explications pour l'envoyer à mon collègue en mettant en copie mon tuteur pour qu'il puisse à son retour voir tout ce que j'ai pu faire en son absence.
+        La démarche en question, je l'ai non seulement mise en commentaire dans Jira mais aussi, j'ai conçu un fichier Excel avec toutes mes explications pour l'envoyer à mon collègue en mettant en copie mon tuteur pour qu'il puisse à son retour voir tout ce que j'ai pu faire en son absence.
 
-Cette expérience a été enrichissante pour moi car elle m'a permis de savoir détecter des erreurs en faisant des tests, savoir les corriger et aussi savoir expliquer à un tiers comment je m'y suis prise à travers une documentation.
+        Cette expérience a été enrichissante pour moi car elle m'a permis de savoir détecter des erreurs en faisant des tests, savoir les corriger et aussi savoir expliquer à un tiers comment je m'y suis prise à travers une documentation.
 
-Depuis, j’ai aussi pris l’habitude de renseigner systématiquement tout ce que je fais, et de manière visible pour tous. Ce n’est pas un hasard : c’est en lien direct avec la méthode de gestion de projet utilisée dans l’entreprise, qui est l’agilité, et plus précisément le cadre Scrum. L’un des piliers de Scrum est la transparence, et je veille donc à ce que mon travail soit clair et accessible à tous les membres de l’équipe.
+        Depuis, j’ai aussi pris l’habitude de renseigner systématiquement tout ce que je fais, et de manière visible pour tous. Ce n’est pas un hasard : c’est en lien direct avec la méthode de gestion de projet utilisée dans l’entreprise, qui est l’agilité, et plus précisément le cadre Scrum. L’un des piliers de Scrum est la transparence, et je veille donc à ce que mon travail soit clair et accessible à tous les membres de l’équipe.
 
-Même si on effectue régulièrement des inspections (autre pilier de Scrum), je considère qu’il est de ma responsabilité d’effectuer mes propres tests unitaires en amont, pour rester crédible et garantir la qualité de mes livrables.
+        Même si on effectue régulièrement des inspections (autre pilier de Scrum), je considère qu’il est de ma responsabilité d’effectuer mes propres tests unitaires en amont, pour rester crédible et garantir la qualité de mes livrables.
 
-Je suis également très observatrice et j’essaie toujours de trouver des solutions innovantes. Par exemple, en lien avec mes cours sur l’automatisation et les tests,
+        Je suis également très observatrice et j’essaie toujours de trouver des solutions innovantes. Par exemple, en lien avec mes cours sur l’automatisation et les tests,
         j'avais envisagé d'utiliser Prefect, un outil de gestion de workflows moderne, pour automatiser mes contrôles. Je savais qu’il pouvait être utilisé en local,
         sans passer par le cloud, grâce à sa version open-source. Toutefois, dans le contexte de l’entreprise, je n’avais pas l’autorisation d’installer 
         de nouveaux outils ou de lancer des serveurs locaux, pour des raisons de sécurité informatique.
-C’est pourquoi je me suis finalement tournée vers une solution plus simple et rapide à mettre en place : 
+        C’est pourquoi je me suis finalement tournée vers une solution plus simple et rapide à mettre en place : 
         un script Python (adaptable en PowerShell), qui permet de comparer automatiquement les fichiers à 
         intégrer et les fichiers des tables déjà alimentées. Ce choix a été bien accueilli par mes collègues, 
         car il répondait efficacement au besoin tout en respectant les contraintes de sécurité.
     </p>
+
+    <!-- Captures pour illustration -->
+    <figure>
+        <img src="https://i.imgur.com/GxVOQUP.jpeg" alt="Exemple fichier paramétrage OSF">
+        <figcaption>Exemple de fichier de paramétrage OSF avec structure à respecter</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.imgur.com/JVoRL1e.jpeg" alt="Exemple de requête SQL dans Teradata">
+        <figcaption>Extrait d'une requête SQL utilisée pour contrôler l'alimentation des tables</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.imgur.com/nqxck5I.jpeg" alt="Extrait de script Python pour comparaison automatique">
+        <figcaption>Extrait du script Python développé pour automatiser la comparaison des fichiers</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://i.imgur.com/5ZSdW0O.jpeg" alt="Mail de récapitulatif et documentation des solutions">
+        <figcaption>Mail de récapitulatif envoyé à mon collègue et tuteur avec la documentation des solutions apportées</figcaption>
+    </figure>
 </body>
 </html>
