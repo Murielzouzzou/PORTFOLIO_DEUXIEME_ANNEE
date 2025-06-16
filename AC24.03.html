@@ -9,82 +9,77 @@
         AC24.03 : Choisir une modélisation adaptée selon le type de données
     </h1>
 
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        <img src="https://i.imgur.com/C6l7lHB.jpeg" width="20%" style="border-radius: 20px; float: right; margin-left: 20px; margin-bottom: 20px;">
+    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.6;">
+        <img src="https://i.imgur.com/C6l7lHB.jpeg" width="20%" style="border-radius: 20px; float: left; margin-right: 20px;">
         Au cours de ma deuxième année d'études en Science des Données, avec une spécialisation en Exploration et Modélisation Statistique, 
-        j'ai acquis des compétences précieuses dans la modélisation des données dans un cadre statistique. 
-        Cela m'a permis de comprendre la nécessité de choisir une modélisation adaptée selon le type de données.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Pour illustrer mes propos, je vais me baser sur le mini projet réalisé pour le cours sur les méthodes factorielles. 
-        Dans le cadre du mini-projet d’analyse factorielle, nous devions choisir un jeu de données libre, validé par l’enseignant, 
-        et appliquer une méthode adaptée d’analyse multivariée.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        J’ai choisi de travailler sur un jeu de données issu de Kaggle portant sur les habitudes de sommeil et les facteurs de santé, 
-        car ce sujet me tient à cœur et présente un fort intérêt en santé publique. Ce projet m’a permis d’explorer un sujet important : 
-        le lien entre sommeil, stress et santé globale.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Mon objectif était d’identifier des profils types de comportements à partir de données quantitatives – comme la qualité du sommeil, 
-        l’activité physique ou encore la fréquence cardiaque – et de comprendre comment ces comportements diffèrent selon des facteurs comme le genre ou l’IMC. 
-        Je voulais savoir s’il existait des groupes d’individus partageant les mêmes habitudes, et comment ces habitudes influencent leur bien-être physique et mental.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Le jeu de données comportait exclusivement des variables quantitatives continues, comme la durée de sommeil, la qualité du sommeil, 
-        la fréquence cardiaque, la pression artérielle, l’activité physique ou encore le nombre de pas. Ces variables étaient mesurées numériquement pour 373 individus. 
-        Je ne me rappelle pas avoir écarté certaines colonnes pour mon analyse.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Après avoir analysé la structure des données, j’ai choisi d’appliquer une Analyse en Composantes Principales (ACP). 
-        Cette méthode est spécifiquement conçue pour des données quantitatives et permet de réduire la complexité du jeu de données tout en conservant l’information la plus pertinente.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        L’ACP était donc plus adaptée que l’AFC (qui s’applique aux tableaux de contingence) ou l’ACM (réservée aux variables qualitatives). 
-        Ce choix s’est appuyé sur la nature numérique et continue des variables. Bien évidemment, ce choix a été validé par le professeur.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Pour la petite anecdote, j'étais partie à la base sur un jeu de donnée de santé générale, mais il y avait très peu de corrélation entre mes données, 
-        donc le professeur m'a aidé à trouver de nouvelles données afin que mon analyse soit mieux orientée.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        En ce qui concerne l'analyse, j'ai utilisé R. Après un centrage-réduction des données, 
-        j’ai extrait les composantes principales, observé la part de variance expliquée par chaque axe, puis visualisé les individus et les variables dans le plan factoriel.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        J’ai aussi ajouté les variables IMC et genre en variables supplémentaires pour enrichir l’interprétation. Pour réussir mon analyse, j'ai tout fait moi-même en m'appuyant sur les conseils du professeur ainsi que sur les TP faits en classe.
-        Comme difficulté, c'était d'être capable d'expliquer mes résultats, mais j'ai réussi à y arriver.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Ainsi, l’analyse a permis d’identifier deux axes principaux expliquant 74 % de la variance. 
-        Le premier met en opposition un sommeil de qualité et un faible niveau de stress avec un stress élevé, une fréquence cardiaque accrue et un sommeil dégradé. 
-        Le second distingue les individus physiquement actifs (beaucoup de pas, activité régulière) de ceux plus sédentaires.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Ce qui m’a le plus marquée, c’est que les personnes en surpoids ou obèses apparaissent majoritairement dans le profil "sous tension", caractérisé par un stress élevé, une activité physique réduite et des indicateurs physiologiques défavorables. 
-        Cette corrélation forte entre IMC, stress et sédentarité m’a fait réfléchir à la complexité des interactions comportementales et physiologiques, 
-        et à l’importance d’approches globales en santé publique pour améliorer le bien-être.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
-        Ce projet m’a permis de mieux comprendre l’intérêt de choisir la méthode statistique en fonction du type de variables. 
-        Aussi, ce projet m’a permis de maîtriser les étapes techniques de l’Analyse en Composantes Principales, de la préparation des données à l’interprétation des résultats.
-        J’ai renforcé ma compréhension statistique de la réduction dimensionnelle, de la variance expliquée, et de la lecture des axes factoriels.
-    </p>
-
-    <p style="text-align: justify; margin-left: 80px; margin-right: 80px; line-height: 1.8;">
+        j'ai acquis des compétences précieuses dans la modélisation des données dans un cadre statistique. <br><br>
+        Cela m'a permis de comprendre la nécessité de choisir une modélisation adaptée selon le type de données.<br><br>
+        Pour illustrer mes propos, je vais me baser sur le mini projet réalisé pour le cours sur les méthodes factorielles.<br><br>
+        Dans le cadre du mini-projet d’analyse factorielle, nous devions choisir un jeu de données libre, validé par l’enseignant, et appliquer une méthode adaptée d’analyse multivariée.<br><br>
+        J’ai choisi de travailler sur un jeu de données issu de Kaggle portant sur les habitudes de sommeil et les facteurs de santé, car ce sujet me tient à cœur
+        et présente un fort intérêt en santé publique.<br><br>
+        Ce projet m’a permis d’explorer un sujet qui me tient à cœur : le lien entre sommeil, stress et santé globale.<br><br>
+        Mon objectif était d’identifier des profils types de comportements à partir de données quantitatives – comme la qualité du sommeil, l’activité physique ou encore la fréquence cardiaque – 
+        et de comprendre comment ces comportements diffèrent selon des facteurs comme le genre ou l’IMC.<br><br>
+        Je voulais savoir s’il existait des groupes d’individus partageant les mêmes habitudes, et comment ces habitudes influencent leur bien-être physique et mental.<br><br>
+        Le jeu de données comportait exclusivement des variables quantitatives continues, comme la durée de sommeil, la qualité du sommeil, la fréquence cardiaque, la pression artérielle, 
+        l’activité physique ou encore le nombre de pas. Ces variables étaient mesurées numériquement pour 373 individus.<br><br>
+        Je ne me rappelle pas avoir écarté certaines colonnes pour mon analyse. Après avoir analysé la structure des données, j’ai choisi d’appliquer une Analyse en Composantes Principales (ACP).<br><br>
+        Cette méthode est spécifiquement conçue pour des données quantitatives et permet de réduire la complexité du jeu de données tout en conservant l’information la plus pertinente.<br><br>
+        L’ACP était donc plus adaptée que l’AFC (qui s’applique aux tableaux de contingence) ou l’ACM (réservée aux variables qualitatives).<br><br>
+        Ce choix s’est appuyé sur la nature numérique et continue des variables. Bien évidemment, ce choix a été validé par le professeur.<br><br>
+        Pour la petite anecdote, j'étais partie à la base sur un jeu de donnée de santé (générale) mais il y avait très peu de corrélation entre mes données, donc le professeur m'a aidé à trouver de nouvelles données afin que mon analyse soit mieux orientée.<br><br>
+        En ce qui concerne l'analyse, j'ai utilisé R. Après un centrage-réduction des données, j’ai extrait les composantes principales, observé la part de variance expliquée par chaque axe, puis visualisé les individus et les variables dans le plan factoriel.<br><br>
+        J’ai aussi ajouté les variables IMC et genre en variables supplémentaires pour enrichir l’interprétation.<br><br>
+        Pour réussir mon analyse, j'ai tout fait moi-même en m'appuyant sur les conseils du professeur ainsi que des TP faits en classe.<br><br>
+        Comme difficulté, c'était d'être capable d'expliquer mes résultats mais j'ai réussi à y arriver.<br><br>
+        Ainsi, l’analyse a permis d’identifier deux axes principaux expliquant 74 % de la variance.<br><br>
+        Le premier met en opposition un sommeil de qualité et un faible niveau de stress avec un stress élevé, une fréquence cardiaque accrue et un sommeil dégradé.<br><br>
+        Le second distingue les individus physiquement actifs (beaucoup de pas, activité régulière) de ceux plus sédentaires.<br><br>
+        Ce qui m’a le plus marqué, c’est que les personnes en surpoids ou obèses apparaissent majoritairement dans le profil "sous tension", caractérisé par un stress élevé, une activité physique réduite et des indicateurs physiologiques défavorables.<br><br>
+        Cette corrélation forte entre IMC, stress et sédentarité m’a fait réfléchir à la complexité des interactions comportementales et physiologiques, et à l’importance d’approches globales en santé publique pour améliorer le bien-être.<br><br>
+        Ce projet m’a permis de mieux comprendre l’intérêt de choisir la méthode statistique en fonction du type de variables.<br><br>
+        Aussi, ce projet m’a permis de maîtriser les étapes techniques de l’Analyse en Composantes Principales, de la préparation des données à l’interprétation des résultats.<br><br>
+        J’ai renforcé ma compréhension statistique de la réduction dimensionnelle, de la variance expliquée, et de la lecture des axes factoriels.<br><br>
         Sur le plan personnel, cette expérience a confirmé mon intérêt pour l’analyse de données appliquée à la santé, en montrant comment des méthodes statistiques peuvent éclairer des comportements complexes liés au bien-être.
     </p>
+
+    <h2 style="text-align: center; color: darkviolet; margin-top: 50px;">Analyse</h2>
+
+    <div style="text-align: center; margin: 40px;">
+        <img src="https://i.imgur.com/HqyIQRb.jpeg" alt="Structure du jeu de données" width="60%" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <p style="font-style: italic; color: gray; font-size: 0.9em; margin-top: 8px;">
+            Figure 1 : Structure du jeu de données avec variables quantitatives et qualitatives (sortie R de str()).
+        </p>
+    </div>
+
+    <div style="text-align: center; margin: 40px;">
+        <img src="https://i.imgur.com/qurzCkM.jpeg" alt="Matrice de corrélation" width="60%" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <p style="font-style: italic; color: gray; font-size: 0.9em; margin-top: 8px;">
+            Figure 2 : Matrice de corrélation entre variables quantitatives, justifiant l'utilisation de l'ACP.
+        </p>
+    </div>
+
+    <div style="text-align: center; margin: 40px;">
+        <img src="https://i.imgur.com/H3Um8eD.jpeg" alt="Résumé ACP" width="60%" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <p style="font-style: italic; color: gray; font-size: 0.9em; margin-top: 8px;">
+            Figure 3 : Résumé de l'Analyse en Composantes Principales (ACP) montrant la variance expliquée.
+        </p>
+    </div>
+
+    <div style="text-align: center; margin: 40px;">
+        <img src="https://i.imgur.com/WAg4wmm.jpeg" alt="Variables sur plan factoriel ACP" width="60%" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <p style="font-style: italic; color: gray; font-size: 0.9em; margin-top: 8px;">
+            Figure 4 : Projection des variables sur le plan factoriel issu de l'ACP.
+        </p>
+    </div>
+
+    <div style="text-align: center; margin: 40px;">
+        <img src="https://i.imgur.com/nqHFhbj.jpeg" alt="Individus sur plan factoriel ACP" width="60%" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        <p style="font-style: italic; color: gray; font-size: 0.9em; margin-top: 8px;">
+            Figure 5 : Projection des individus avec coloration selon la catégorie IMC sur le plan factoriel.
+        </p>
+    </div>
+
 </body>
 </html>
